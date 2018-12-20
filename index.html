@@ -101,7 +101,7 @@ function foodLocation() {
 }
 
 function keyPressed() {
-  var mostrecentword = myRec.resultString.split(' ').pop();
+  var mostrecentword = myRec.resultString ? myRec.resultString.split(' ').pop() : ' ';
   if(keyCode === LEFT_ARROW || mostrecentword.indexOf("left")!==-1) {
     snake.setDir(-1, 0);
   } else if (keyCode === RIGHT_ARROW || mostrecentword.indexOf("right")!==-1) {
